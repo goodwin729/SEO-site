@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext,cyrillic);
+
+@border-radius-base: 0;
+@transition-25: #f00;
+/*----fonts----*/
+@brand-font: 'Open Sans', sans-serif;
+@font-family-base: Arial, sans-serif;
+@font-size-base: 14px;
+@text-shadow-white: 1px 2px 0 #fff;
+/*---general---*/
+@grid-columns: 16;
+@container-md: 960px;
+@container-lg: 1200px;
+@site-padding: 15px;
+@site-column: @site-padding * 4;
+/*---colors----*/
+
+@black: #000;
+@white: #fff;
+
+@brand-color-lighter: lighten(@brand-color, 30%);
+@brand-color-light: lighten(@brand-color, 10%);
+@brand-color: #21545b;
+@brand-color-dark: darken(@brand-color, 10%);
+@brand-color-darker: darken(@brand-color, 20%);
+
+@brand-color-contrast-lighter: lighten(@brand-color-contrast, 30%);
+@brand-color-contrast-light: lighten(@brand-color-contrast, 10%);
+@brand-color-contrast: #ee3253;
+@brand-color-contrast-dark: darken(@brand-color-contrast, 10%);
+@brand-color-contrast-darker: darken(@brand-color-contrast, 20%);
+
+
+@body-bg: @white;
+@input-color: #b2b2b2;
+@text-color: #8f8f8f;
+
+
+.scale-1{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.scale-1_1{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.transition-1_5s{
+  transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+}
+.transition-0_5s{
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.transition-0_3s{
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.rotate-45{
+  -webkit-transform:rotateZ(45deg);
+  -moz-transform:rotateZ(45deg);
+  -o-transform:rotateZ(45deg);
+  -ms-transform:rotateZ(45deg);
+  transform:rotateZ(45deg);
+  * {
+    -webkit-transform:rotateZ(-45deg);
+    -moz-transform:rotateZ(-45deg);
+    -o-transform:rotateZ(-45deg);
+    -ms-transform:rotateZ(-45deg);
+    transform:rotateZ(-45deg);
+  }
+}
+/*--------------*/
+.text-decor {
+  position: relative;
+  &:before {
+    content: "";
+    background-color: @brand-color-light;
+    display: block;
+    height: 1px;
+    right: 50%;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    .transition-0_5s;
+  }
+  &:hover {
+    &:before {
+      background-color: @brand-color-contrast;
+      right: 0;
+      width: 100%;
+    }
+  }
+}
+.text-decor-none {
+  position: relative;
+  &:before {
+    display: none;
+  }
+}

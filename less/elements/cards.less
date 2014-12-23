@@ -1,0 +1,48 @@
+@import "../variables.less";
+
+.cards{
+  background: @gray-light url("../images/bg-slide-2.jpg") no-repeat center center;
+  background-size: cover;
+  padding: @site-padding 0;
+  text-align: center;
+  h2{
+    text-shadow: @text-shadow-white;
+  }
+  ul{
+    margin: 0 -@site-padding / 2;
+    padding: @site-padding 0;
+    position: relative;
+    li{
+      background-color: @white;
+      display: inline-block;
+      margin: @site-padding @site-padding / 2;
+      padding: 0 @site-column @site-padding;
+      width: @site-column * 5 + @site-padding * 4;
+      .ico-card{
+        background-color: @blue-light;
+        border-radius: 50%;
+        color: @white;
+        display: block;
+        height: @site-column;
+        margin: @site-padding / 2 auto;
+        overflow: hidden;
+        position: relative;
+        margin-top: -(@site-padding + @site-padding / 2);
+        width: @site-column;
+        img{
+          position: relative;
+        }
+      }
+      .title{
+        color: @black;
+        display: block;
+        font-size: 22px;
+        margin: @site-padding / 2 auto;
+      }
+      .title:hover{
+        color: @blue-light;
+        text-decoration: none;
+      }
+    }
+  }
+}

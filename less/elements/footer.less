@@ -1,0 +1,46 @@
+@import "../variables.less";
+
+footer{
+  background-color: @white;
+  padding: @site-padding 0;
+  .container{
+    background-color: @gray-light;
+    padding-bottom: @site-padding;
+    padding-top: @site-padding;
+    a.logo{
+      color: @gray-dark;
+      font-family: @brand-font;
+      font-size: 22px;
+      line-height: 24px;
+      position: relative;
+      text-decoration: none;
+      img{
+        float: left;
+        margin-right: @site-padding;
+        width: 92px;
+      }
+      span{
+        display: block;
+        overflow: hidden;
+        padding-top: @site-padding / 4;
+      }
+    }
+    .info_block{
+      .title{
+        color: @black;
+        display: block;
+        text-transform: uppercase;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        li{
+          border-top: @gray 1px dotted;
+          font-size: 12px;
+          padding: @site-padding 0;
+        }
+        li:first-child{ border-top: none;}
+      }
+    }
+  }
+}

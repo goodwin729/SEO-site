@@ -1,0 +1,113 @@
+@import "../variables.less";
+
+.post{
+  ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+      border-top: @gray 2px dotted;
+      padding: @site-padding 0;
+      .post-img{
+        margin: (@site-padding / 2) 0;
+        overflow: hidden;
+        position: relative;
+        .photo-info{
+          background: url("../images/bg-overlay.png") repeat 0 0;
+          color: @white;
+          display: block;
+          font-size: 11px;
+          height: 100%;
+          padding: @site-padding / 2 0;
+          padding-right: @site-padding / 4;
+          position: absolute;
+          right: -@site-padding * 2;
+          text-align: center;
+          top: 0;
+          width: @site-padding * 2 - @site-padding / 4;
+          .transition-0_5s;
+
+          .number{
+            display: block;
+            font-weight: normal;
+          }
+          .number:before{
+            content: "";
+            border-top: @site-padding / 4 solid @black;
+            border-left: @site-padding / 4 solid transparent;
+            display: block;
+            height: 0;
+            left: -@site-padding / 4;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            margin-top: -@site-padding / 4;
+            width: 0;
+          }
+          .number:after{
+            content: "";
+            border-bottom: @site-padding / 4 solid @black;
+            border-left: @site-padding / 4 solid transparent;
+            display: block;
+            height: 0;
+            left: -@site-padding / 4;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            width: 0;
+          }
+        }
+        .photo-info:before{
+          content: "";
+          background: @black;
+          display: block;
+          height: 50%;
+          left: -@site-padding / 4;
+          margin-top: -@site-padding / 4;
+          opacity: 0.7;
+          position: absolute;
+          top: 0;
+          width: @site-padding / 4;
+        }
+        .photo-info:after{
+          content: "";
+          background: @black;
+          display: block;
+          height: 50%;
+          left: -@site-padding / 4;
+          margin-top: @site-padding / 4;
+          opacity: 0.7;
+          position: absolute;
+          top: 50%;
+          width: @site-padding / 4;
+        }
+      }
+      .post-img:hover{
+        .photo-info{
+          display: block;
+          right: 0;
+        }
+      }
+      .title{
+        display: block;
+        padding: @site-padding / 2 0;
+        overflow: hidden;
+      }
+      p{
+        margin: 0;
+        padding: @site-padding / 2 0;
+      }
+      .data{
+        display: block;
+        font-size: 12px;
+        font-style: italic;
+        padding: @site-padding / 2 0;
+      }
+    }
+    li:first-child{
+      border-top: none;
+      padding-top: 0;
+    }
+    li > *:last-child{ padding-bottom: 0;}
+    li > *:first-child{ padding-top: 0;}
+  }
+}

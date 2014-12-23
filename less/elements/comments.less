@@ -1,0 +1,44 @@
+@import "../variables.less";
+
+.comments{
+  background-color: @white;
+  padding-bottom: @site-padding;
+  padding-top: @site-padding;
+  a{ text-decoration: none;}
+  ul{
+    padding: 0;
+    position: relative;
+    li{
+      /*border-left: @gray 1px dotted;*/
+      display: inline-block;
+      padding-bottom: @site-column;
+      padding-left: @site-column + @site-padding;
+      padding-right: @site-padding;
+      .ava{
+        border: @white 2px solid;
+        border-radius: 50%;
+        float: left;
+        height: @site-column;
+        margin-right: @site-padding;
+        margin-top: @site-padding;
+        overflow: hidden;
+        width: @site-column;
+      }
+      .ava:hover{
+        box-shadow: 0 0 15px @blue-light;
+      }
+      .discription{
+        overflow: hidden;
+        .author{
+          display: block;
+          .name{
+            color: @gray-dark;
+            display: block;
+            font-weight: bold;
+          }
+          .name:hover{ color: @blue-light;}
+        }
+      }
+    }
+  }
+}

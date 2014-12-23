@@ -1,0 +1,62 @@
+@import "../variables.less";
+
+.author-block{
+  background-color: @gray-light;
+  overflow: hidden;
+  text-align: center;
+  ul{
+    margin: 0 -@site-column - 10px;
+    padding: @site-padding 0;
+    position: relative;
+    li{
+      display: inline-block;
+      font-size: 17px;
+      margin: @site-padding / 2 @site-column - 10px;
+      overflow: visible;
+      width: @site-column * 3 + @site-padding * 2;
+      .ava{
+        background-color: #999;
+        border-radius: 50%;
+        display: block;
+        height: @site-column * 3 + @site-padding * 2;
+        margin-bottom: 30px;
+        overflow: hidden;
+        position: relative;
+        transition: 1s linear;
+        width: 100%;
+      }
+      .ava:hover {
+        .scale-1_1;
+      }
+      .ava:not(:hover){
+        .scale-1;
+      }
+      .name{
+        color: @black;
+        display: block;
+        font-size: 22px;
+        line-height: 1em;
+      }
+      .name:hover{
+        color: @blue-light;
+        text-decoration: none;
+      }
+      .second-name{
+        color: @gray;
+        display: block;
+      }
+      .social-ico{
+        background-color: @blue-light;
+        color: @white;
+        display: inline-block;
+        height: @site-padding + 5;
+        margin-top: @site-padding / 2;
+        overflow: hidden;
+        width: @site-padding + 5;
+      }
+      .tw img{ margin-top: 0;}
+      .fb img{ margin-top: -(@site-padding + 5);}
+      .gp img{ margin-top: -(@site-padding + 5) * 2;}
+    }
+  }
+}

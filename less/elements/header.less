@@ -1,0 +1,58 @@
+@import "../variables.less";
+
+header{
+  background: @gray-light;
+  box-shadow: 0 0 5px @blue-light;
+  height: 160px;
+  padding: 30px 0;
+  z-index: 1000;
+  .transition-1s;
+  a.logo{
+    color: @gray-dark;
+    font-size: 24px;
+    font-family: @brand-font;
+    position: relative;
+    text-decoration: none;
+    span{
+      display: block;
+      left: @site-padding / 2;
+      position: absolute;
+      top: 78px;
+      width: 295px;
+    }
+    img{
+      margin-left: @site-column + @site-padding;
+    }
+  }
+  a, nav, .logo, .logo img, .logo span{
+    .transition-1s;
+  }
+}
+header.large{
+  height: 160px;
+  img{
+    height: 68px;
+    width: 125px;
+  }
+}
+header.small{
+  height: @site-column;
+  .logo{
+    top: -@site-padding;
+    img{
+      height: 50px;
+      margin-top: -5px;
+      margin-left: @site-padding * 2;
+      width: 92px;
+      .transition-0_5s;
+    }
+    span{
+      left: 170px;
+      top: 0;
+    }
+  }
+  nav{
+    margin-top: -(@site-padding + 5);
+  }
+}
+header.navbar-fixed-top{ z-index: 2005;}

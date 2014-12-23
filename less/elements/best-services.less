@@ -1,0 +1,28 @@
+@import "../variables.less";
+
+.best-services{
+  background-color: @gray-light;
+  ul{
+    background: url("../images/dots.png") no-repeat center 48px;
+    padding: @site-padding 0;
+    text-align: center;
+    li{
+      color: @gray-dark;
+      display: inline-block;
+      font-family: @brand-font;
+      font-size: 22px;
+      width: @site-column * 2 + @site-padding * 2;
+      .label-services{
+        border-radius: 50%;
+        display: block;
+        height: @site-column;
+        margin: 0 auto;
+        overflow: hidden;
+        width: @site-column;
+      }
+      .hands img{ background: @green;}
+      .heart img{ background: @red;}
+      .like img{ background: @pink;}
+    }
+  }
+}
